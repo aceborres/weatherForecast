@@ -1,0 +1,81 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+/***********************************************************************
+* Color Palette
+***********************************************************************/
+
+$primaryColor   :   #DB5A6B;
+
+$navyBlue       :   #3D5273;
+$primaryViolet  :   #2B244D;
+$darkPink       :   #C93756;
+
+$textColor      :   #212121;
+$subTextColor   :   #969c9c;
+$textColor-3    :   #424242;
+
+/***********************************************************************
+* Custom Style
+***********************************************************************/
+body {
+    background-image: linear-gradient(to right bottom, #db5a6b, #df6471, #e36e78, #e7787f, #eb8286, #ef8f9a, #f29cad, #f4aabf, #f2c0da, #f1d7ed, #f4ecf9, #ffffff);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-violet {
+    background-color: $primaryViolet;
+}
+
+.content-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherbg {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 10px;
+}
+
+#fiveDayWeather {
+    margin-bottom: 20px;
+    display:flex;
+    flex-flow:row;
+
+    @media only screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    .weatherDate {
+        color: $textColor-3;
+    }
+    .card-text {
+        #description {
+            color: $subTextColor;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        #temp {
+            color: $darkPink;
+            font-size: 24px;
+        }
+
+    }
+    .card {
+        width:100%;
+    }
+}
+
+#weatherIcon {
+    margin-top: 10px;
+    width: 50px !important;
+}
